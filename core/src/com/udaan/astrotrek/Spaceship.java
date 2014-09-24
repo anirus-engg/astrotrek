@@ -27,7 +27,7 @@ public class Spaceship {
 
     public void move() {
         x = x + speed;
-    }
+    }git
 
     public boolean checkCrash(int x, int y) {
         if(handicap)

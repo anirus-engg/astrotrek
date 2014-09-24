@@ -157,8 +157,10 @@ public class World {
 
         if(spaceship.isHandicap()) {
             handicapTick += deltaTime;
-            if(handicapTick > HANDICAP)
+            if(handicapTick > HANDICAP) {
+                handicapTick = 0.0f;
                 spaceship.setHandicap(false);
+            }
         }
     }
 

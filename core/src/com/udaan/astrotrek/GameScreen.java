@@ -108,11 +108,11 @@ public class GameScreen implements Screen {
                     Settings.setGoldStars(Settings.getGoldStars() - starsRequired);
                     starsRequired *= 2;
                     world.setGameOver(false);
+                    gameState = GameState.Running;
                     world.getSpaceship().setX(131);
                     world.getSpaceship().setY(58);
                     world.getSpaceship().setSpeed(Spaceship.STABLE);
                     world.getSpaceship().setHandicap(true);
-                    gameState = GameState.Running;
                     assets.playSound(assets.getClick(), 1);
                     assets.playMusic(assets.getBackgroundMusic(), 1, true);
                 }
