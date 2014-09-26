@@ -49,8 +49,11 @@ public class MainScreen implements Screen {
         game.batch.draw(assets.getGameLogo(), 32, 275);
         game.batch.draw(assets.getPlayMenu(), 64, 167);
         game.batch.draw(assets.getGoldStar(), 5, 447);
+        game.batch.draw(assets.getHighscore(), (320 - (assets.getHighscore().getWidth() + ("" + Settings.getHighScore()).length() * 30)) / 2, 120);
         game.batch.draw(assets.getVolume(Settings.isSoundEnabled()), 5, 46);
         game.batch.draw(assets.getTutorial(Settings.isTutorial()), 100, 53);
+        Screens.drawNumbers(game, "" + Settings.getHighScore(), (320 - (assets.getHighscore().getWidth() + ("" + Settings.getHighScore()).length() * 30)) / 2
+                + assets.getHighscore().getWidth() + 1, 120, assets.getNumbers());
         Screens.drawNumbers(game, "" + Settings.getGoldStars(), 42, 453, assets.getNumbers());
         game.batch.end();
     }

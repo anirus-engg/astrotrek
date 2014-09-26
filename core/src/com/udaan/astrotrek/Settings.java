@@ -6,7 +6,7 @@ import com.badlogic.gdx.files.FileHandle;
 public class Settings {
     private static final String FILE = ".astrotrek";
     private static boolean soundEnabled = true;
-    private static int[] highScores = new int[] {550, 250, 125, 60, 30};
+    private static int highScores = 0;
     private static boolean tutorial = true;
     private static int goldStars = 3;
 
@@ -19,9 +19,7 @@ public class Settings {
             soundEnabled = Boolean.parseBoolean(strings[0]);
             tutorial = Boolean.parseBoolean(strings[1]);
             goldStars = Integer.parseInt(strings[2]);
-            for (int i = 0; i < 5; i++) {
-                highScores[i] = Integer.parseInt(strings[i+14]);
-            }
+            highScores = Integer.parseInt(strings[3]);
         } catch (Throwable e) {
             // :( It's ok we have defaults
         }
@@ -34,22 +32,13 @@ public class Settings {
             filehandle.writeString(Boolean.toString(soundEnabled)+"\n", false);
             filehandle.writeString(Boolean.toString(tutorial)+"\n", true);
             filehandle.writeString(Integer.toString(goldStars)+"\n", true);
-            for (int i = 0; i < 5; i++) {
-                filehandle.writeString(Integer.toString(highScores[i])+"\n", true);
-            }
+            filehandle.writeString(Integer.toString(highScores)+"\n", true );
         } catch (Throwable ignored) {
         }
     }
 
     public static void addScore(int score) {
-        for(int i = 0; i < 5; i++) {
-            if(highScores[i] < score) {
-                for(int j = 4; j > i; j--)
-                    highScores[j] = highScores[j - 1];
-                highScores[i] = score;
-                break;
-            }
-        }
+        highScores = (highScores > score) ? highScores : score;
     }
 
     public static boolean isSoundEnabled() {
@@ -60,7 +49,7 @@ public class Settings {
         Settings.soundEnabled = soundEnabled;
     }
 
-    public static int[] getHighScore() {
+    public static int getHighScore() {
         return highScores;
     }
 
