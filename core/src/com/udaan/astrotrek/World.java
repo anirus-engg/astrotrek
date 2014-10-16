@@ -12,7 +12,7 @@ public class World {
     protected static final int ASTEROID_SPEEDS = 4;
     protected static final float NEW_ASTEROID_TIME = 0.75f;
     protected static final float UPDATE_ASTEROID_TIME = 0.75f;
-    protected static final float NEW_STAR_TIME = 10.0f;
+    protected static final float NEW_STAR_TIME = 15.0f;
     protected static final float UPDATE_SCORE = 1.0f;
     protected static final float UPDATE_TUTORIAL = 3.0f;
     protected static final float HANDICAP = 3.0f;
