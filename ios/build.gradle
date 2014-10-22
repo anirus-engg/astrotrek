@@ -11,6 +11,12 @@ ext {
 // under build/libs/ios/.
 task copyNatives << {
   file("build/libs/ios/").mkdirs();
+    copy {
+        from "libs"
+        into "build/libs/ios"
+        include "*.a"
+    }
+
   configurations.natives.files.each { jar ->
     def outputDir = null
     if (jar.name.endsWith("natives-ios.jar")) outputDir = file("build/libs/ios")
@@ -63,3 +69,4 @@ eclipse.project {
     name = appName + "-ios"
     natures 'org.robovm.eclipse.RoboVMNature'
 }
+

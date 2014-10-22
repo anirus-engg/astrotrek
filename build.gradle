@@ -18,7 +18,7 @@ allprojects {
     version = '1.0'
     ext {
         appName = 'AstroTrek'
-        gdxVersion = '1.2.0'
+        gdxVersion = '1.4.1'
         roboVMVersion = '0.0.14'
     }
 
@@ -67,7 +67,6 @@ project(":ios") {
         compile "org.robovm:robovm-cocoatouch:${roboVMVersion}"
         compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
-        compile fileTree(dir: 'libs', include: '*.jar')
     }
 }
 
