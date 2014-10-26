@@ -139,8 +139,9 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
     }
 
     @Override
-    public void showShop() {
+    public boolean showShop() {
         Intent intent = new Intent(this, ShopActivity.class);
         startActivity(intent);
+        return true;
     }
 }

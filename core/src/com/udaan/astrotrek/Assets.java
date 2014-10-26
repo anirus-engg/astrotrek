@@ -13,6 +13,7 @@ public class Assets {
     private static Texture asteroidsExplosion;
     private static Texture background;
     private static Texture bronzeStar;
+    private static Texture comingSoon;
     private static Texture gameLogo;
     private static Texture gameOverMenu;
     private static Texture goldStar;
@@ -60,6 +61,7 @@ public class Assets {
         pauseMenu = loadTexture("images/pause_menu.png");
         goldStar = loadTexture("images/gold_star.png");
         bronzeStar = loadTexture("images/bronze_star.png");
+        comingSoon = loadTexture("images/coming_soon.png");
         numbers = loadTexture("images/numbers.png");
         tutorial1 = loadTexture("images/tutorial_1.png");
         tutorial2 = loadTexture("images/tutorial_2.png");
@@ -101,6 +103,10 @@ public class Assets {
 
     public Texture getBronzeStar() {
         return bronzeStar;
+    }
+
+    public Texture getComingSoon() {
+        return comingSoon;
     }
 
     public Texture getGameLogo() {

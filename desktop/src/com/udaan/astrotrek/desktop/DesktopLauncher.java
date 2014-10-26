@@ -25,7 +25,7 @@ public class DesktopLauncher implements IActivityRequestHandler{
     }
 
     @Override
-    public void showShop() {
-
+    public boolean showShop() {
+        return false;
     }
 }

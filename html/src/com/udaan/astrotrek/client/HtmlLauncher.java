@@ -24,7 +24,7 @@ public class HtmlLauncher extends GwtApplication implements IActivityRequestHand
     }
 
     @Override
-    public void showShop() {
-
+    public boolean showShop() {
+        return false;
     }
 }

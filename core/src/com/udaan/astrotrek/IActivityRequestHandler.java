@@ -6,5 +6,5 @@ package com.udaan.astrotrek;
 public interface IActivityRequestHandler {
     public void showAds(boolean show);
 
-    public void showShop();
+    public boolean showShop();
 }

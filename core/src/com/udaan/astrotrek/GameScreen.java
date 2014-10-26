@@ -95,7 +95,6 @@ public class GameScreen implements Screen {
 
         if(Gdx.input.justTouched()) {
             camera.unproject(touchPoint.set(Gdx.input.getX(), Gdx.input.getY(), 0));
-            //TODO - updateGameOver
             if(Screens.inBounds(touchPoint, 41, 174, 238, 33)) {
                 assets.playSound(assets.getClick(), 1);
                 saveScores();
@@ -117,7 +116,9 @@ public class GameScreen implements Screen {
                     assets.playMusic(assets.getBackgroundMusic(), 1, true);
                 }
                 else {
-                    game.myRequestHandler.showShop();
+                    if(!game.myRequestHandler.showShop()) {
+                        game.setScreen(new ComingSoonScreen(game));
+                    }
                 }
             }
 
