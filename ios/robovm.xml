@@ -49,5 +49,8 @@
     <framework>OpenAL</framework>
     <framework>AudioToolbox</framework>
     <framework>AVFoundation</framework>
+    <framework>MessageUI</framework>
+    <framework>SystemConfiguration</framework>
+    <framework>CoreTelephony</framework>
   </frameworks>
 </config>
