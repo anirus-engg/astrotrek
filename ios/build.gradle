@@ -64,6 +64,13 @@ launchIPadSimulator.dependsOn build
 launchIOSDevice.dependsOn build
 createIPA.dependsOn build
 
+robovm {
+    iosSignIdentity = "iPhone Distribution: Udaan Technologies Limited Liability Company (ZSTGBLF546)"
+    iosProvisioningProfile = "Astro Trek Distribution Provisioning Profile"
+    iosSkipSigning = false
+    stdoutFifo = ""
+    stderrFifo = ""
+}
 
 eclipse.project {
     name = appName + "-ios"

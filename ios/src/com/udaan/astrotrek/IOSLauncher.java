@@ -14,7 +14,7 @@ import org.robovm.bindings.admob.GADBannerView;
 import org.robovm.bindings.admob.GADRequest;
 
 public class IOSLauncher extends IOSApplication.Delegate implements IActivityRequestHandler{
-    private static final String AD_UNIT_ID = "ca-app-pub-8996795250788622/6788677098";
+    private static final String AD_UNIT_ID = "ca-app-pub-8996795250788622/9431074692";
 
     private UIViewController rootViewController;
     private GADBannerView bannerView;
